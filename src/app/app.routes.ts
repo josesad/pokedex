@@ -10,8 +10,12 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () => import('./home/home.page').then((c) => c.HomePage)
     },
-    // {
-    //     path: 'detalhes/:id',
-    //     loadComponent: () => import('./detalhes/detalhes.page').then((c) => c.DetalhesPage)
-    // }
+  {
+    path: 'detalhes',
+    loadComponent: () => import('./detalhes/detalhes.page').then( m => m.DetalhesPage)
+  },
+    {
+        path: 'detalhes/:id',
+        loadComponent: () => import('./detalhes/detalhes.page').then((c) => c.DetalhesPage)
+    }
 ];
